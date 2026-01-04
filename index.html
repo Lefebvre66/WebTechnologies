@@ -9,15 +9,14 @@
 <body>
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
     <header>
         <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications (ComManTel)</p>
         <p class="event-date-location">14-17 December 2025 // Madrid, Spain</p>
         <p class="event-status" style="color: red; font-weight: bold;">Hybrid Event</p>
 
         <div class="logo-wrapper">
-            <img src="images\ieee-comsoc-new-x2.png" alt="IEEE Communications Society Logo">
-            <img src="images\ieee@2x.png" alt="IEEE Logo">
+            <img src="images/ieee-comsoc-new-x2.png" alt="IEEE Communications Society Logo">
+            <img src="images/ieee@2x.png" alt="IEEE Logo">
         </div>
 
         <button type="button" id="toggle-nav">Toggle navigation</button>
@@ -25,60 +24,47 @@
         <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#conference">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li>
                     <a href="#">Committees</a>
                     <ul> 
-                        <li><a href="#">Steering Committee</a></li>
-                        <li><a href="#">Organizing Committee</a></li>
-                        <li><a href="#">Technical Program Committee</a></li>
+                        <li><a href="steCommittee.html">Steering Committee</a></li>
+                        <li><a href="orgCommittee.html">Organizing Committee</a></li>
+                        <li><a href="techCommittee.html">Technical Program Committee</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Author</a>
+                    <a href="authorPapers.html">Author</a>
                     <ul>
-                        <li><a href="#submission">Call for Papers</a></li>
-                        <li><a href="#">Camera ready</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Workshops</a></li>
-                <li><a href="#">Keynote speakers</a></li>
-                <li>
-                    <a href="#program">Program</a>
-                    <ul>
-                        <li><a href="#">Overview Program</a></li>
-                        <li><a href="#">Program Details</a></li>
+                        <li><a href="authorPapers.html">Call for Papers</a></li>
+                        <li><a href="authorCamera.html">Camera ready</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#registration">Registration</a>
+                    <a href="programDetails.html">Program</a>
                     <ul>
-                        <li><a href="#">Event Conduct</a></li>
+                        <li><a href="programOverview.html">Overview Program</a></li>
+                        <li><a href="programDetails.html">Program Details</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">Hotel / Travel</a>
+                <li><a href="registration.html">Registration</a>
                     <ul>
-                        <li><a href="#">Visa Letter Request</a></li>
+                        <li><a href="eventConduct.html">Event Conduct</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Venue</a></li>
                 <li><a href="#membership">Membership</a></li>
+                <li><a href="#">Venue</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
         
-        <section id="conference">
+        <div id="conference">
             <div class="slider-controls">
                 <ol>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
+                    <li><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#">6</a></li>
                 </ol>
                 <ul>
                     <li><a href="#">Previous</a></li>
@@ -87,7 +73,7 @@
                 <p><a href="#">Pause</a></p>
             </div>
 
-            <article class="welcome-text">
+            <div class="welcome-text">
                 <h1>Welcome to ComManTel 2025!</h1>
                 <p>
                     The trio of Computing, Management, and Telecommunications plays a pivotal role in shaping the contemporary technological landscape. Computing, with its ever‐evolving paradigms, fuels innovation across diverse domains—not only through the development of advanced algorithms and software but also by harnessing artificial intelligence and machine learning to solve complex problems while addressing ethical concerns such as data privacy and algorithmic bias. Management strategies provide the essential organizational framework needed for effective planning, execution, and adaptability, making strategic and project management, as well as organizational behavior, critical to navigating today's rapidly changing business environment. In Telecommunications, next‑generation communication technologies and wireless connectivity are paramount; these not only connect people globally but also form the backbone for emerging applications like the Internet of Things (IoT) and digital transformation initiatives. Overcoming these challenges demands interdisciplinary collaboration, continuous innovation, and a commitment to responsible and sustainable technological advancement.
@@ -95,10 +81,19 @@
                 <p>
                     The 4th International Conference on Computing, Management and Telecommunications (ComManTel) invites researchers, practitioners, and academicians to share cutting‐edge research and innovative practices. ComManTel provides a global platform for exchanging insights, fostering collaboration, and addressing both the opportunities and challenges in these dynamic domains.
                 </p>
-            </article>
-        </section>
+            </div>
 
-        <section id="submission">
+            <div class="gallery">
+                <h2>Past Editions</h2>
+                </div>
+        </div>
+
+        <div id="program">
+            <h2>Conference Program</h2>
+            <p>Regular sessions, special sessions, and social events details[cite: 17].</p>
+            </div>
+
+        <div id="submission">
             <p>
                 Prospective authors are invited to submit original technical papers—up to 6 pages of length, using the EDAS link:
             </p>
@@ -217,21 +212,60 @@
                     </ul>
                 </li>
             </ol>
+        </div>
+        <section id="important-dates" class="conference-section">
+            <h2>Important Dates</h2>
+            <p>
+                <strong>Full/Short Paper Submissions Due:</strong><br>
+                <del>September 15</del> <del>29</del> October 6, 2025
+            </p>
+            <p>
+                <strong>Poster/Demo Submissions Due:</strong><br>
+                October <del>29</del> <del>13</del> 20, 2025
+            </p>
+            <p>
+                <strong>Acceptance Notification (Full/Short Papers):</strong><br>
+                November 6, 2025
+            </p>
+            <p>
+                <strong>Acceptance Notification (Poster/Demo Papers):</strong><br>
+                October 25, 2025
+            </p>
+            
+            <div>
+                <p><strong>Camera Ready Paper Due:</strong><br> November 25, 2025</p>
+                <p><strong>Conference Dates:</strong><br> December 14–17, 2025</p>
+            </div>
         </section>
-
-        <section id="patrons">
-            <article class="patrons">
-                <h1>Patrons</h1>
-                <img src="images\Patron_1.png" alt="IEEE Sección España">
-                <img src="images\Patron_2.png" alt="Universidad Politécnica de Valencia">
-            </article>
+        <hr>
+        <section id="previous-editions" class="conference-section">
+            <h2>Previous Editions</h2>
+            <ul>
+                <li>2015: DaNang, Vietnam</li>
+                <li>2014: Da Nang, Vietnam</li>
+                <li>2013: Ho Chi Minh City, Vietnam</li>
+            </ul>
+            <p>
+            <a href=" https://ieeexplore.ieee.org/xpl/conhome/1802719/all-proceedings" target="_blank" data-feathr-click-track="true" data-feathr-link-aids="5f246ec4b5b0487e1c536e69">View all proceedings on IEEE Xplore »</a>
+            </p>
         </section>
+        <div id="patrons">
+            <div class="patrons-container">
+                <h2>Patrons</h2>
+                <img src="images/Patron_1.png" alt="IEEE Sección España">
+                <img src="images/Patron_2.png" alt="Universidad Politécnica de Valencia">
+            </div>
+        </div>
 
     </main>
 
     <footer>
         <p>For more information, contact <a style="color:grey" href="mailto:info@commantel.net"><b>info@commantel.net</b></a> or visit <a style="color:grey" href="https://commantel.net"><b>https://commantel.net</b></a></p>
         <p>&copy; COMMANTEL 2025. All rights reserved.</p>
+        <div class="logo-wrapper">
+            <img src="images/ieee-comsoc-new-x2.png" alt="IEEE Communications Society Logo">
+            <img src="images/ieee@2x.png" alt="IEEE Logo">
+        </div>
     </footer>
 
 </body>
