@@ -1,813 +1,665 @@
-/* --- ESTILOS GENERALES --- */
+/* ==========================================================================
+   1. CORE & RESET
+   ========================================================================== */
 * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-        font-size: 10px;
-        font-family: sans-serif;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
+    font-size: 10px;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #333;
-        background-color: #e9e9e9;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #7c7c7c;
+    background-color: #e9e9e9;
 }
 
 .container {
-        max-width: 1100px;
-        margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-h1 {
-        font-family: 'Oswald', sans-serif;
-        font-weight: 400;
+/* Typography Base */
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
 }
 
-h2 {
-        font-family: 'Oswald', sans-serif;
-        font-weight: 400;
-        font-size: 1.8rem;
-}
-
-h3 {
-        font-size: 1.6rem;
-}
-
-h4 {
-        font-size: 1.4rem;
-}
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
 
 p {
-        font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
 }
 
-/* --- CABECERA --- */
+/* ==========================================================================
+   2. HEADER SECTION
+   ========================================================================== */
 header {
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
 }
 
 .header-info p {
-        margin: 2px 0;
-        font-family: "Oswald", Arial, sans-serif;
-        line-height: 1.175;
-        display: block;
-        clear: both;
+    margin: 2px 0;
+    font-family: "Oswald", Arial, sans-serif;
+    line-height: 1.175;
+    display: block;
+    clear: both;
 }
 
 .event-name {
-        font-size: 1.3em;
-        color: #404041;
-        font-weight: 400;
-        padding-top: 0;
+    font-size: 1.3em;
+    color: #404041;
+    font-weight: 400;
+    padding-top: 0;
 }
 
 .event-date-location {
-        font-size: 1.3em;
-        color: #404041;
-        font-weight: 200;
-        padding-top: 2px;
+    font-size: 1.3em;
+    color: #404041;
+    font-weight: 200;
+    padding-top: 2px;
 }
 
 .event-status {
-        color: #f80000;
-        font-size: 14px;
+    color: #f80000;
+    font-size: 14px;
 }
 
 .logo-wrapper img {
-        height: 45px;
-        margin-left: 15px;
-        vertical-align: middle;
+    height: 45px;
+    margin-left: 15px;
+    vertical-align: middle;
 }
 
-/* --- NAVEGACIÓN PRINCIPAL (BASE) --- */
+/* ==========================================================================
+   3. MAIN NAVIGATION & DROPDOWNS
+   ========================================================================== */
 .main-nav {
-        background-color: #005f98;
-        position: relative;
-        z-index: 1000;
-        /* Asegura que el menú esté por encima de todo */
+    background-color: #005f98;
+    position: relative;
+    z-index: 1000;
 }
 
 .main-nav ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilo para los ítems de primer nivel */
-.main-nav>ul>li {
-        position: relative;
-        /* Necesario para posicionar el submenú */
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
+.main-nav > ul > li {
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .main-nav ul li a {
-        display: block;
-        padding: 12px 20px;
-        color: #fff;
-        text-decoration: none;
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.4rem;
-        font-weight: 400;
-        text-transform: uppercase;
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .main-nav ul li a:hover {
-        background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 191, 255);
 }
 
-/* --- SUBMENÚS (LO NUEVO) --- */
-
-/* Ocultar el submenú por defecto */
+/* Submenus */
 .main-nav ul li ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        /* Aparece justo debajo */
-        left: 0;
-        background-color: #005a96;
-        /* Un tono más oscuro */
-        min-width: 220px;
-        flex-direction: column;
-        /* Alineación vertical */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #005a96;
+    min-width: 220px;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Mostrar al pasar el ratón */
-.main-nav ul li:hover>ul {
-        display: flex;
+.main-nav ul li:hover > ul {
+    display: flex;
 }
 
-/* Estilos para los enlaces dentro del submenú */
 .main-nav ul li ul li {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
 }
 
 .main-nav ul li ul li a {
-        padding: 10px 15px;
-        font-size: 1.4rem;
-        text-transform: none;
-        /* Submenús en minúsculas se leen mejor */
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    text-transform: none;
 }
 
 .main-nav ul li ul li a:hover {
-        background-color: #004574;
-        /* Efecto hover más profundo en submenús */
+    background-color: #004574;
 }
 
-/* --- BANNER PRINCIPAL (MADRID) --- */
+/* ==========================================================================
+   4. HERO & SLIDESHOW
+   ========================================================================== */
 .hero {
-        position: relative;
-        width: 100%;
-        border-bottom: 5px solid #0071bc;
+    position: relative;
+    width: 100%;
+    border-bottom: 5px solid #0071bc;
 }
 
 .hero img {
-        width: 100%;
-        display: block;
-        height: auto;
+    width: 100%;
+    display: block;
+    height: auto;
 }
 
-.slider-dots {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 8px;
-}
-
-.dot {
-        width: 18px;
-        height: 18px;
-        background: #bbb;
-        border-radius: 50%;
-}
-
-.dot.active {
-        background: #0071bc;
-        border: none;
-}
-
-/* --- CONTENIDO DE DOS COLUMNAS --- */
-.main-layout {
-        display: flex;
-        padding: 20px;
-        gap: 30px;
-        align-items: flex-start;
-}
-
-.content-left {
-        flex: 3;
-        /* Le damos más espacio al contenido principal */
-}
-
-/* --- COLUMNA LATERAL (Estilo Navegación Superior Derecha) --- */
-.sidebar-right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding-top: 10px;
-}
-
-.sidebar-right ul {
-        list-style: none;
-        /* ELIMINA LOS PUNTOS (bullets) */
-        padding: 0;
-        margin: 0;
-}
-
-.sidebar-right ul li {
-        margin-bottom: 15px;
-        /* Espaciado vertical entre links */
-}
-
-.sidebar-right ul li a {
-        text-decoration: none;
-        color: #3a7ebf;
-        /* El azul cian/claro de las fotos de Registration */
-        font-family: 'Oswald', sans-serif;
-        /* O una fuente condensada similar */
-        font-size: 1.9rem;
-        /* Tamaño grande como se ve en la imagen */
-        font-weight: 400;
-        text-transform: uppercase;
-        /* Todo en mayúsculas */
-        transition: color 0.2s ease;
-}
-
-.sidebar-right ul li a:hover {
-        color: #2f4fa0;
-        /* Color un poco más oscuro al pasar el mouse */
-}
-
-/* --- TÍTULOS ESTILO BARRA GRIS --- */
-.section-title {
-        background-color: #58595b;
-        color: #fff;
-        padding: 8px 15px;
-        font-size: 1.9rem;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-}
-
-/* --- TEXTO BIENVENIDA --- */
-.welcome-text p {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-        text-align: justify;
-        color: #404041;
-        /* Color exacto del original */
-        line-height: 1.42857143;
-        /* Interlineado del original */
-}
-
-.welcome-text h2,
-h3 {
-        font-family: 'Oswald', sans-serif;
-        color: #58595b;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-weight: 400;
-        text-transform: uppercase;
-}
-
-/* Listas ordenadas (ol) y no ordenadas (ul) */
-.welcome-text ol,
-.welcome-text ul {
-        margin-left: 25px;
-        /* Un poco más de espacio para los números/puntos */
-        margin-bottom: 20px;
-        color: #404041;
-}
-
-.welcome-text ol>li,
-.welcome-text ul li {
-        margin-bottom: 10px;
-        font-size: 1.4rem;
-        line-height: 1.42857143;
-        /* Corregido de 0.8 a la del original */
-}
-
-/* Los elementos en negrita dentro de las listas */
-.welcome-text ol>li>b,
-.welcome-text ul>li>b {
-        font-size: 1.4rem;
-        color: #404041;
-}
-
-/* Sublistas si las hubiera */
-.welcome-text ul {
-        margin-top: 8px;
-}
-
-/* --- PATRONS --- */
-.patrons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-}
-
-.patrons img {
-        max-width: 350px;
-        height: auto;
-}
-
-/* --- FECHAS IMPORTANTES --- */
-.sidebar-right h2 {
-        color: #58595b;
-        font-size: 1.9rem;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 5px;
-}
-
-.date-item {
-        margin-bottom: 15px;
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.9rem;
-}
-
-.date-item strong {
-        display: block;
-        color: #333;
-        font-weight: normal;
-}
-
-.date-blue {
-        color: #0071bc;
-}
-
-del {
-        color: #999;
-        margin-right: 4px;
-}
-
-/* --- PIE DE PÁGINA --- */
-footer {
-        background: #fff;
-        padding: 20px;
-        border-top: 1px solid #ddd;
-        font-size: 1.2rem;
-}
-
-footer .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1100px;
-        margin: 0 auto;
-}
-
-footer .footer-text {
-        text-align: left;
-}
-
-footer .footer-text p {
-        margin: 5px 0;
-        font-size: 1.2rem;
-        line-height: 1.5;
-}
-
-footer .footer-text a {
-        color: #0071bc;
-        text-decoration: none;
-}
-
-footer .footer-text a:hover {
-        text-decoration: underline;
-}
-
-footer .footer-logo {
-        flex-shrink: 0;
-}
-
-/* --- SPEAKER IMAGE FLOATING STYLE --- */
-.keynote-speaker-img {
-        float: left;
-        margin: 0 20px 20px 0;
-        width: 220px;
-        height: auto;
-        border-radius: 4px;
-}
-
-.keynote-speaker-content {
-        overflow: auto;
-}
-
-footer .footer-logo img {
-        display: block;
-}
-
-footer .footer-logos {
-        margin-top: 10px;
-        opacity: 0.7;
-}
-
-
-
-* {
-        box-sizing: border-box
-}
-
-/* Slideshow container */
 .slideshow-container {
-        max-width: 2000px;
-        position: relative;
-        margin: auto;
+    max-width: 2000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -50px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .slideshow-dots {
-        position: absolute;
-        left: 50%;
-        bottom: 12px;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 8px;
-        padding: 6px 10px;
-        border-radius: 999px;
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
 }
 
-/* Hide the images by default */
-.mySlides {
-        display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -50px;
-        padding: 16px;
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-        font-size: 50px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-}
-
-/* The dots/bullets/indicators */
 .dot {
-        cursor: pointer;
-        height: 18px;
-        width: 18px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-        background-color: #0071bc;
+.dot:hover, .active {
+    background-color: #0071bc;
 }
 
-/* Fading animation */
-.fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
+/* ==========================================================================
+   5. MAIN CONTENT LAYOUT
+   ========================================================================== */
+.main-layout {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    align-items: flex-start;
 }
 
-/* --- CONTENEDOR PRINCIPAL CON BORDES REDONDEDOS --- */
+.content-left {
+    flex: 3;
+}
+
+.sidebar-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+/* Sidebar Navigation */
+.sidebar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-right ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar-right ul li a {
+    text-decoration: none;
+    color: #3a7ebf;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.sidebar-right ul li a:hover {
+    color: #2f4fa0;
+}
+
+/* ==========================================================================
+   6. CONTENT COMPONENTS (TEXT, TITLES, BUTTONS)
+   ========================================================================== */
+.section-title {
+    background-color: #58595b;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: auto;
+}
+
+.inner-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #404041;
+}
+
+.hotel-title {
+    color: #005f98; 
+    text-transform: uppercase; 
+    font-family: 'Oswald', sans-serif;
+    margin-top: 20px;
+}
+
+.welcome-text p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #404041;
+    line-height: 1.42857143;
+}
+
+.welcome-text p.important-text {
+    color: #f80000;
+}
+
+.welcome-text h2, .welcome-text h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #58595b;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Lists */
+.welcome-text ol, .welcome-text ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: #404041;
+}
+
+.welcome-text ol > li, .welcome-text ul li {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    line-height: 1.42857143;
+}
+
+.welcome-text ol > li > b, .welcome-text ul > li > b {
+    font-size: 1.4rem;
+    color: #404041;
+}
+
+/* Buttons */
+.program-actions {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.blue-button {
+    display: inline-flex;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    color: #ffffff;
+    background-color: #005f98;
+    border: 1px solid #004f7f;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.blue-button:hover {
+    background-color: #004d7a;
+    border-color: #003a5c;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   7. TABLES (PRICE & SCHEDULE) AND BANNERS
+   ========================================================================== */
+.event-banner-blue {
+    background-color: #3f60c1;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.event-banner-blue h1 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.price-table thead {
+    background-color: #f2f2f2;
+}
+
+.price-table th, .price-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    color: #444;
+}
+
+.date-red {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.price-table tbody tr {
+    background-color: #f9f9f9;
+}
+
+/* Timeline / Schedule */
 .timeline-container {
-        border: 2px solid #1a3a82;
-        border-radius: 12px;
-        overflow: hidden;
-        margin: 20px 0;
-        font-family: 'Poppins', sans-serif;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
+    border: 2px solid #1a3a82;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
-/* --- TABLA DE AGENDA --- */
 .schedule-table {
-        width: 100%;
-        border-collapse: collapse;
-        border-spacing: 0;
-        table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
-/* --- ENCABEZADOS (Header) --- */
 .schedule-table thead th {
-        background-color: #1a3a82;
-        color: white;
-        padding: 15px 10px;
-        font-weight: 700;
-        font-size: 1.2rem;
-        text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        /* Líneas finas entre columnas */
-}
-
-.schedule-table thead th:last-child {
-        border-right: none;
+    background-color: #1a3a82;
+    color: white;
+    padding: 15px 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .schedule-table thead th:first-child,
 .schedule-table tbody td:first-child {
-        width: 60px;
-        /* Aquí ajustas el ancho (antes estaba en 80px o 100px) */
-        min-width: 60px;
-        max-width: 70px;
-        white-space: nowrap;
-        /* Evita que la hora se ponga una encima de otra */
+    width: 60px;
+    min-width: 60px;
+    max-width: 70px;
+    white-space: nowrap;
 }
 
 .schedule-table tbody td:first-child {
-        background-color: #1a3a82;
-        color: white;
-        font-weight: 600;
-        font-size: 0.8rem;
-        /* Un poco más pequeña para que quepa bien */
-        text-align: center;
-        border: 1px solid #ffffff;
-        vertical-align: middle;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    vertical-align: middle;
 }
 
-/* --- COLUMNA DE TIEMPO (Izquierda - Estilo Imagen 2) --- */
-.schedule-table tbody td:first-child {
-        background-color: #ffffff;
-        color: #000000;
-        font-size: 0.9rem;
-        text-align: center;
-        width: 90px;
-        border: 1px solid #ffffff;
-        /* Bordes blancos definidos */
-        vertical-align: middle;
-        /* Centrado vertical */
-}
-
-/* --- CELDAS Y SESIONES --- */
 .schedule-table td {
-        border: 1px solid #e0e0e0;
-        height: 45px;
-        /* Altura ajustada para mayor claridad */
-        vertical-align: middle;
-        /* Centra el contenido verticalmente en celdas con rowspan */
-        padding: 0;
+    border: 1px solid #e0e0e0;
+    height: 45px;
+    vertical-align: middle;
+    padding: 0;
 }
 
-/* Fondo gris para los bloques de sesiones (Sunday y Tuesday) */
 .schedule-table td[rowspan] {
-        background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
-/* Fondo blanco para Monday y Wednesday */
-/* Nota: Se aplica a las columnas específicas según el diseño */
 .schedule-table tr td:nth-child(2),
 .schedule-table tr td:nth-child(4) {
-        background-color: #f2f2f2;
-        /* Gris */
+    background-color: #f2f2f2;
 }
 
 .schedule-table tr td:nth-child(3),
 .schedule-table tr td:nth-child(5),
 .schedule-table tr td:nth-child(6) {
-        background-color: #ffffff;
-        /* Blanco */
+    background-color: #ffffff;
 }
 
-/* Estilo de los enlaces/bloques de texto */
 .schedule-table td a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* Centrado vertical del contenido */
-        align-items: center;
-        /* Centrado horizontal del contenido */
-        text-decoration: none;
-        height: 100%;
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
 }
 
-/* Títulos de las sesiones */
 .schedule-table td a strong {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 0.85rem;
-        color: #444;
-        margin-bottom: 6px;
-        display: block;
-        line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 6px;
+    display: block;
 }
 
-/* Color azul para los títulos en las columnas de fondo blanco (Imagen 2) */
 .schedule-table td:nth-child(3) a strong,
 .schedule-table td:nth-child(5) a strong,
 .schedule-table td:nth-child(6) a strong {
-        color: #4a90e2;
+    color: #4a90e2;
 }
 
-/* Horas debajo de los títulos */
 .schedule-table td a small {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        font-size: 0.85rem;
-        color: #777;
-        display: block;
+    font-size: 0.85rem;
+    color: #777;
 }
 
-/* Hover effect suave */
-.schedule-table td a:hover {
-        background-color: rgba(0, 113, 188, 0.05);
+/* ==========================================================================
+   8. SPECIAL SECTIONS (SPEAKERS, EVENTS, PATRONS)
+   ========================================================================== */
+.keynote-speaker-img {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 220px;
+    height: auto;
+    border-radius: 4px;
 }
 
-/* --- ESTILOS ADICIONALES DEL BANNER --- */
-.event-banner-blue {
-        background-color: #3f60c1;
-        color: #fff;
-        padding: 40px 20px;
-        text-align: center;
+.keynote-speaker-content {
+    overflow: auto;
 }
 
-.event-banner-blue h1 {
-        font-family: "Oswald", sans-serif;
-        text-transform: uppercase;
-        font-size: 2.2rem;
-}
-
-/* --- CLASE REUTILIZABLE: BLUE BUTTON --- */
-.program-actions {
-        margin-top: 20px;
-        text-align: center;
-        padding: 10px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-}
-
-.blue-button {
-        display: inline-flex;
-        margin-bottom: 0;
-        text-align: center;
-        vertical-align: middle;
-        touch-action: manipulation;
-        cursor: pointer;
-        background-image: none;
-        white-space: nowrap;
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 1.42857143;
-        border-radius: 4px;
-        text-decoration: none;
-        user-select: none;
-        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-        color: #ffffff !important;
-        background-color: #005f98;
-        border: 1px solid #004f7f;
-        transition: background-color 0.2s ease-in-out;
-}
-
-.blue-button:hover {
-        background-color: #004d7a;
-        border-color: #003a5c;
-        color: #ffffff;
-}
-
-/* --- FILA DE MÉTODOS DE PAGO --- */
-.payment-methods-row {
-        display: flex;
-        /* Activa Flexbox */
-        justify-content: center;
-        /* Centra las imágenes horizontalmente */
-        align-items: center;
-        /* Alinea las imágenes verticalmente */
-        gap: 20px;
-        /* Espacio de 2rem (20px) entre cada imagen */
-        margin: 20px 0;
-        /* Margen superior e inferior */
-        padding: 10px;
-}
-
-.payment-methods-row img {
-        height: auto;
-        /* Mantiene la proporción */
-        max-width: 100px;
-        /* Controla el ancho máximo de cada logo */
-        object-fit: contain;
-        /* Asegura que no se deformen */
-        display: block;
-}
-
-/* Ajuste específico por si algún logo es más grande que otro */
-.payment-methods-row img[alt="Visa"] {
-        max-width: 80px;
-}
-
-.payment-methods-row img[alt="Mastercard"] {
-        max-width: 60px;
-}
-
-.payment-methods-row img[alt="American Express"] {
-        max-width: 50px;
-}
-
-/* --- CONTENEDOR PRINCIPAL (TARJETA BLANCA) --- */
 .events-block {
-        background-color: #ffffff;
-        border-radius: 15px;
-        /* Bordes redondeados de la imagen 2 */
-        padding: 25px 35px;
-        margin: 20px 0;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        /* Sombra suave */
-        border: 1px solid #e0e0e0;
-        font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px 35px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* --- TÍTULO PRINCIPAL DEL EVENTO --- */
-.event-title {
-        color: #2f4fa0;
-}
-
-/* Encabezado que junta título y elementos */
 .event-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        border-bottom: 1px solid #e0e0e0;
-        /* Línea divisoria fina */
-        padding-bottom: 15px;
-        margin-bottom: 20px;
-        color: #2f4fa0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #2f4fa0;
 }
 
-/* --- LISTADO DE SESIONES --- */
 .session-row {
-        margin-bottom: 15px;
-        line-height: 1.4;
+    margin-bottom: 15px;
+    line-height: 1.4;
 }
 
-/* Hora y Título de la sesión */
 .session-info {
-        font-size: 1.4rem;
-        color: #2f4fa0;
+    font-size: 1.4rem;
+    color: #2f4fa0;
 }
 
 .session-time {
-        font-weight: bold;
-        color: #2f4fa0;
-        margin-right: 5px;
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .session-name {
-        font-weight: 700;
+    font-weight: 700;
 }
 
-/* Autores en cursiva debajo */
 .session-authors {
-        display: block;
-        font-style: italic;
-        font-size: 0.9rem;
-        color: #666;
-        margin-top: 2px;
+    display: block;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2px;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 992px) {
-        .event-header {
-                flex-direction: column;
-                gap: 10px;
-        }
+.patrons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
+.patrons img {
+    max-width: 350px;
+    height: auto;
+}
+
+.payment-methods-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.payment-methods-row img {
+    height: auto;
+    max-width: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+footer {
+    background: #fff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 1.2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-text p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.footer-text a {
+    color: #0071bc;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo img {
+    display: block;
+}
+
+/* ==========================================================================
+   10. ANIMATIONS & RESPONSIVE
+   ========================================================================== */
 @keyframes fade {
-        from {
-                opacity: .4
-        }
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
 
-        to {
-                opacity: 1
-        }
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@media (max-width: 992px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .event-header {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
