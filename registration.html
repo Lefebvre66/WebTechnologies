@@ -9,41 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .reg-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-family: Arial, sans-serif;
-        }
-        .reg-table th, .reg-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .reg-table th {
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .btn-register {
-            display: inline-block;
-            background-color: #0071bc;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .btn-register:hover {
-            background-color: #005a96;
-        }
-        .btn-register.disabled {
-            background-color: #7a7a7a;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -102,8 +67,12 @@
                 <h1 class="section-title">Registration</h1>
                 
                 <div class="welcome-text" style="text-align: center;">
-                    <a href="#" class="btn-register">REGISTER NOW</a>
-                    <p><strong>Accepted: VISA | Mastercard | American Express</strong></p>
+                    <a href="#" class="blue-button">Register Now</a>
+                    <div class="payment-methods-row">
+                        <img src="images/visa.png" alt="Visa">
+                        <img src="images/mastercard.png" alt="Mastercard">
+                        <img src="images/americanexpress.png" alt="American Express">
+                    </div>
                 </div>
 
                 <div class="welcome-text">
@@ -183,27 +152,6 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        (function () {
-            const registerBtn = document.querySelector('.btn-register');
-            if (!registerBtn) return;
-
-            const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
-
-            if (isLoggedIn) {
-                registerBtn.textContent = 'YOU ARE LOGGED IN';
-                registerBtn.classList.add('disabled');
-                registerBtn.removeAttribute('href');
-                registerBtn.setAttribute('aria-disabled', 'true');
-                return;
-            }
-
-            registerBtn.setAttribute('href', 'register.html');
-            registerBtn.addEventListener('click', () => {
-                window.location.href = 'register.html';
-            });
-        })();
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>

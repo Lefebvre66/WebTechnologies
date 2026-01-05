@@ -33,7 +33,15 @@ h1 {
 h2 {
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
+}
+
+h3 {
+        font-size: 1.6rem;
+}
+
+h4{
+        font-size: 1.4rem;
 }
 
 p {
@@ -151,7 +159,7 @@ header {
 
 .main-nav ul li ul li a {
         padding: 10px 15px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         text-transform: none;
         /* Submenús en minúsculas se leen mejor */
 }
@@ -227,11 +235,12 @@ header {
         font-size: 1.4rem;
         margin-bottom: 15px;
         text-align: justify;
-        color: #444;
+        color: #404041; /* Color exacto del original */
+        line-height: 1.42857143; /* Interlineado del original */
 }
 
-.welcome-text h2 {
-        font-size: 1.2rem;
+.welcome-text h2,h3 {
+        font-family: 'Oswald', sans-serif;
         color: #58595b;
         margin-top: 20px;
         margin-bottom: 10px;
@@ -239,35 +248,31 @@ header {
         text-transform: uppercase;
 }
 
-.welcome-text ol {
-        margin-left: 20px;
-        margin-bottom: 20px;
-}
-
-.welcome-text ol>li {
-        margin-bottom: 15px;
-        font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-        font-size: 1.4rem;
-        color: #444;
-        line-height: 0.8;
-}
-
-.welcome-text ol>li>b {
-        font-size: 0.95rem;
-        color: #444;
-}
-
+/* Listas ordenadas (ol) y no ordenadas (ul) */
+.welcome-text ol, 
 .welcome-text ul {
-        margin-left: 20px;
-        margin-top: 8px;
+    margin-left: 25px; /* Un poco más de espacio para los números/puntos */
+        margin-bottom: 20px;
+        color: #404041;
 }
 
+.welcome-text ol > li, 
 .welcome-text ul li {
-        margin-bottom: 5px;
-        font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-        font-size: 0.85rem;
-        color: #444;
-        line-height: 1.2;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+    line-height: 1.42857143; /* Corregido de 0.8 a la del original */
+}
+
+/* Los elementos en negrita dentro de las listas */
+.welcome-text ol > li > b,
+.welcome-text ul > li > b {
+        font-size: 1.4rem;
+        color: #404041;
+}
+
+/* Sublistas si las hubiera */
+.welcome-text ul {
+        margin-top: 8px;
 }
 
 /* --- PATRONS --- */
@@ -579,7 +584,7 @@ footer .footer-logos {
     border-radius: 4px;
     text-decoration: none;
     user-select: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
     color: #ffffff !important;
     background-color: #005f98;
     border: 1px solid #004f7f;
@@ -590,6 +595,36 @@ footer .footer-logos {
     background-color: #004d7a;
     border-color: #003a5c;
     color: #ffffff;
+}
+
+/* --- FILA DE MÉTODOS DE PAGO --- */
+.payment-methods-row {
+    display: flex;            /* Activa Flexbox */
+    justify-content: center;  /* Centra las imágenes horizontalmente */
+    align-items: center;      /* Alinea las imágenes verticalmente */
+    gap: 20px;                /* Espacio de 2rem (20px) entre cada imagen */
+    margin: 20px 0;           /* Margen superior e inferior */
+    padding: 10px;
+}
+
+.payment-methods-row img {
+    height: auto;             /* Mantiene la proporción */
+    max-width: 100px;         /* Controla el ancho máximo de cada logo */
+    object-fit: contain;      /* Asegura que no se deformen */
+    display: block;
+}
+
+/* Ajuste específico por si algún logo es más grande que otro */
+.payment-methods-row img[alt="Visa"] {
+    max-width: 80px;
+}
+
+.payment-methods-row img[alt="Mastercard"] {
+    max-width: 60px;
+}
+
+.payment-methods-row img[alt="American Express"] {
+    max-width: 50px;
 }
 
 @keyframes fade {
