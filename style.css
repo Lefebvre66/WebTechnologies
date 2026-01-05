@@ -1,0 +1,269 @@
+/* --- ESTILOS GENERALES --- */
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+
+body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+        background-color: #e9e9e9;
+}
+
+.container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+}
+
+h2 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+}
+
+p {
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+/* --- CABECERA --- */
+header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+}
+
+.header-info p {
+        margin: 2px 0;
+}
+
+.event-name {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #444;
+}
+
+.event-date-location {
+        font-size: 0.9rem;
+        color: #666;
+}
+
+.event-status {
+        color: #cc0000;
+        font-weight: bold;
+        font-size: 0.9rem;
+}
+
+.logo-wrapper img {
+        height: 45px;
+        margin-left: 15px;
+        vertical-align: middle;
+}
+
+/* --- NAVEGACIÓN AZUL --- */
+nav {
+        background-color: #0071bc;
+}
+
+nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+}
+
+nav ul li {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a {
+        display: block;
+        padding: 12px 15px;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+}
+
+nav ul li a:hover {
+        background-color: #005a96;
+}
+
+/* --- BANNER PRINCIPAL (MADRID) --- */
+.hero {
+        position: relative;
+        width: 100%;
+        border-bottom: 5px solid #0071bc;
+}
+
+.hero img {
+        width: 100%;
+        display: block;
+        height: auto;
+}
+
+.slider-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+}
+
+.dot {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+}
+
+.dot.active {
+        background: #fff;
+        border: 2px solid #0071bc;
+}
+
+/* --- CONTENIDO DE DOS COLUMNAS --- */
+.main-layout {
+        display: flex;
+        padding: 20px;
+        gap: 30px;
+}
+
+.content-left {
+        flex: 2;
+}
+
+.sidebar-right {
+        flex: 1;
+        border-left: 1px solid #ddd;
+        padding-left: 20px;
+}
+
+/* --- TÍTULOS ESTILO BARRA GRIS --- */
+.section-title {
+        background-color: #58595b;
+        color: #fff;
+        padding: 8px 15px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+}
+
+/* --- TEXTO BIENVENIDA --- */
+.welcome-text p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        text-align: justify;
+        color: #444;
+}
+
+.welcome-text h2 {
+        font-size: 1.2rem;
+        color: #58595b;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+}
+
+.welcome-text ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+}
+
+.welcome-text ol>li {
+        margin-bottom: 15px;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+        font-size: 0.9rem;
+        color: #444;
+        line-height: 0.8;
+}
+
+.welcome-text ol>li>b {
+        font-size: 0.95rem;
+        color: #444;
+}
+
+.welcome-text ul {
+        margin-left: 20px;
+        margin-top: 8px;
+}
+
+.welcome-text ul li {
+        margin-bottom: 5px;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+        font-size: 0.85rem;
+        color: #444;
+        line-height: 1.2;
+}
+
+/* --- PATRONS --- */
+.patrons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+}
+
+.patrons img {
+        max-width: 200px;
+        height: auto;
+}
+
+/* --- FECHAS IMPORTANTES --- */
+.sidebar-right h2 {
+        color: #58595b;
+        font-size: 1rem;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+}
+
+.date-item {
+        margin-bottom: 15px;
+        font-size: 0.85rem;
+}
+
+.date-item strong {
+        display: block;
+        color: #333;
+}
+
+.date-blue {
+        color: #0071bc;
+        font-weight: bold;
+}
+
+del {
+        color: #999;
+        margin-right: 4px;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+        background: #fff;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        font-size: 0.8rem;
+}
+
+footer .footer-logos {
+        margin-top: 10px;
+        opacity: 0.7;
+}
