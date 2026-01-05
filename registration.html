@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos específicos para la tabla de registro que puedes añadir a tu style.css */
         .reg-table {
             width: 100%;
             border-collapse: collapse;
@@ -38,6 +37,11 @@
         }
         .btn-register:hover {
             background-color: #005a96;
+        }
+        .btn-register.disabled {
+            background-color: #7a7a7a;
+            cursor: not-allowed;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -180,5 +184,26 @@
         </footer>
     </div>
 
+    <script>
+        (function () {
+            const registerBtn = document.querySelector('.btn-register');
+            if (!registerBtn) return;
+
+            const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+
+            if (isLoggedIn) {
+                registerBtn.textContent = 'YOU ARE LOGGED IN';
+                registerBtn.classList.add('disabled');
+                registerBtn.removeAttribute('href');
+                registerBtn.setAttribute('aria-disabled', 'true');
+                return;
+            }
+
+            registerBtn.setAttribute('href', 'register.html');
+            registerBtn.addEventListener('click', () => {
+                window.location.href = 'register.html';
+            });
+        })();
+    </script>
 </body>
 </html>
