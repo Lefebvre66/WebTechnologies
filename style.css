@@ -6,10 +6,10 @@
 }
 
 html {
-    font-size: 10px;
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+        font-size: 10px;
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -40,7 +40,7 @@ h3 {
         font-size: 1.6rem;
 }
 
-h4{
+h4 {
         font-size: 1.4rem;
 }
 
@@ -125,7 +125,7 @@ header {
 }
 
 .main-nav ul li a:hover {
-        background-color: #005f98;
+        background-color: rgb(0, 191, 255);
 }
 
 /* --- SUBMENÚS (LO NUEVO) --- */
@@ -205,46 +205,54 @@ header {
 
 /* --- CONTENIDO DE DOS COLUMNAS --- */
 .main-layout {
-    display: flex;
-    padding: 20px;
-    gap: 30px;
-    align-items: flex-start;
+        display: flex;
+        padding: 20px;
+        gap: 30px;
+        align-items: flex-start;
 }
 
 .content-left {
-    flex: 3; /* Le damos más espacio al contenido principal */
+        flex: 3;
+        /* Le damos más espacio al contenido principal */
 }
 
 /* --- COLUMNA LATERAL (Estilo Navegación Superior Derecha) --- */
 .sidebar-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
 }
 
 .sidebar-right ul {
-    list-style: none;    /* ELIMINA LOS PUNTOS (bullets) */
-    padding: 0;
-    margin: 0;
+        list-style: none;
+        /* ELIMINA LOS PUNTOS (bullets) */
+        padding: 0;
+        margin: 0;
 }
 
 .sidebar-right ul li {
-    margin-bottom: 15px; /* Espaciado vertical entre links */
+        margin-bottom: 15px;
+        /* Espaciado vertical entre links */
 }
 
 .sidebar-right ul li a {
-    text-decoration: none;
-    color: #3a7ebf;      /* El azul cian/claro de las fotos de Registration */
-    font-family: 'Oswald', sans-serif; /* O una fuente condensada similar */
-    font-size: 1.9rem;   /* Tamaño grande como se ve en la imagen */
-    font-weight: 400;
-    text-transform: uppercase; /* Todo en mayúsculas */
-    transition: color 0.2s ease;
+        text-decoration: none;
+        color: #3a7ebf;
+        /* El azul cian/claro de las fotos de Registration */
+        font-family: 'Oswald', sans-serif;
+        /* O una fuente condensada similar */
+        font-size: 1.9rem;
+        /* Tamaño grande como se ve en la imagen */
+        font-weight: 400;
+        text-transform: uppercase;
+        /* Todo en mayúsculas */
+        transition: color 0.2s ease;
 }
 
 .sidebar-right ul li a:hover {
-    color: #2f4fa0;      /* Color un poco más oscuro al pasar el mouse */
+        color: #2f4fa0;
+        /* Color un poco más oscuro al pasar el mouse */
 }
 
 /* --- TÍTULOS ESTILO BARRA GRIS --- */
@@ -262,11 +270,14 @@ header {
         font-size: 1.4rem;
         margin-bottom: 15px;
         text-align: justify;
-        color: #404041; /* Color exacto del original */
-        line-height: 1.42857143; /* Interlineado del original */
+        color: #404041;
+        /* Color exacto del original */
+        line-height: 1.42857143;
+        /* Interlineado del original */
 }
 
-.welcome-text h2,h3 {
+.welcome-text h2,
+h3 {
         font-family: 'Oswald', sans-serif;
         color: #58595b;
         margin-top: 20px;
@@ -276,23 +287,25 @@ header {
 }
 
 /* Listas ordenadas (ol) y no ordenadas (ul) */
-.welcome-text ol, 
+.welcome-text ol,
 .welcome-text ul {
-    margin-left: 25px; /* Un poco más de espacio para los números/puntos */
+        margin-left: 25px;
+        /* Un poco más de espacio para los números/puntos */
         margin-bottom: 20px;
         color: #404041;
 }
 
-.welcome-text ol > li, 
+.welcome-text ol>li,
 .welcome-text ul li {
         margin-bottom: 10px;
         font-size: 1.4rem;
-    line-height: 1.42857143; /* Corregido de 0.8 a la del original */
+        line-height: 1.42857143;
+        /* Corregido de 0.8 a la del original */
 }
 
 /* Los elementos en negrita dentro de las listas */
-.welcome-text ol > li > b,
-.welcome-text ul > li > b {
+.welcome-text ol>li>b,
+.welcome-text ul>li>b {
         font-size: 1.4rem;
         color: #404041;
 }
@@ -312,7 +325,7 @@ header {
 }
 
 .patrons img {
-        max-width: 200px;
+        max-width: 350px;
         height: auto;
 }
 
@@ -351,8 +364,55 @@ footer {
         background: #fff;
         padding: 20px;
         border-top: 1px solid #ddd;
-        text-align: center;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
+}
+
+footer .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+}
+
+footer .footer-text {
+        text-align: left;
+}
+
+footer .footer-text p {
+        margin: 5px 0;
+        font-size: 1.2rem;
+        line-height: 1.5;
+}
+
+footer .footer-text a {
+        color: #0071bc;
+        text-decoration: none;
+}
+
+footer .footer-text a:hover {
+        text-decoration: underline;
+}
+
+footer .footer-logo {
+        flex-shrink: 0;
+}
+
+/* --- SPEAKER IMAGE FLOATING STYLE --- */
+.keynote-speaker-img {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 220px;
+        height: auto;
+        border-radius: 4px;
+}
+
+.keynote-speaker-content {
+        overflow: auto;
+}
+
+footer .footer-logo img {
+        display: block;
 }
 
 footer .footer-logos {
@@ -437,115 +497,128 @@ footer .footer-logos {
 
 /* --- CONTENEDOR PRINCIPAL CON BORDES REDONDEDOS --- */
 .timeline-container {
-    border: 2px solid #1a3a82;
-    border-radius: 12px;
-    overflow: hidden; 
-    margin: 20px 0;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+        border: 2px solid #1a3a82;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 20px 0;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
 }
 
 /* --- TABLA DE AGENDA --- */
 .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
 }
 
 /* --- ENCABEZADOS (Header) --- */
 .schedule-table thead th {
-    background-color: #1a3a82;
-    color: white;
-    padding: 15px 10px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Líneas finas entre columnas */
+        background-color: #1a3a82;
+        color: white;
+        padding: 15px 10px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        /* Líneas finas entre columnas */
 }
 
 .schedule-table thead th:last-child {
-    border-right: none;
+        border-right: none;
 }
 
 .schedule-table thead th:first-child,
 .schedule-table tbody td:first-child {
-    width: 60px; /* Aquí ajustas el ancho (antes estaba en 80px o 100px) */
-    min-width: 60px;
-    max-width: 70px;
-    white-space: nowrap; /* Evita que la hora se ponga una encima de otra */
+        width: 60px;
+        /* Aquí ajustas el ancho (antes estaba en 80px o 100px) */
+        min-width: 60px;
+        max-width: 70px;
+        white-space: nowrap;
+        /* Evita que la hora se ponga una encima de otra */
 }
 
 .schedule-table tbody td:first-child {
-    background-color: #1a3a82;
-    color: white;
-    font-weight: 600;
-    font-size: 0.8rem; /* Un poco más pequeña para que quepa bien */
-    text-align: center;
-    border: 1px solid #ffffff;
-    vertical-align: middle;
+        background-color: #1a3a82;
+        color: white;
+        font-weight: 600;
+        font-size: 0.8rem;
+        /* Un poco más pequeña para que quepa bien */
+        text-align: center;
+        border: 1px solid #ffffff;
+        vertical-align: middle;
 }
+
 /* --- COLUMNA DE TIEMPO (Izquierda - Estilo Imagen 2) --- */
 .schedule-table tbody td:first-child {
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 0.9rem;
-    text-align: center;
-    width: 90px;
-    border: 1px solid #ffffff; /* Bordes blancos definidos */
-    vertical-align: middle; /* Centrado vertical */
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 90px;
+        border: 1px solid #ffffff;
+        /* Bordes blancos definidos */
+        vertical-align: middle;
+        /* Centrado vertical */
 }
 
 /* --- CELDAS Y SESIONES --- */
 .schedule-table td {
-    border: 1px solid #e0e0e0;
-    height: 45px; /* Altura ajustada para mayor claridad */
-    vertical-align: middle; /* Centra el contenido verticalmente en celdas con rowspan */
-    padding: 0;
+        border: 1px solid #e0e0e0;
+        height: 45px;
+        /* Altura ajustada para mayor claridad */
+        vertical-align: middle;
+        /* Centra el contenido verticalmente en celdas con rowspan */
+        padding: 0;
 }
 
 /* Fondo gris para los bloques de sesiones (Sunday y Tuesday) */
 .schedule-table td[rowspan] {
-    background-color: #f2f2f2;
+        background-color: #f2f2f2;
 }
 
 /* Fondo blanco para Monday y Wednesday */
 /* Nota: Se aplica a las columnas específicas según el diseño */
 .schedule-table tr td:nth-child(2),
 .schedule-table tr td:nth-child(4) {
-    background-color: #f2f2f2; /* Gris */
+        background-color: #f2f2f2;
+        /* Gris */
 }
 
-.schedule-table tr td:nth-child(3), 
+.schedule-table tr td:nth-child(3),
 .schedule-table tr td:nth-child(5),
 .schedule-table tr td:nth-child(6) {
-    background-color: #ffffff; /* Blanco */
+        background-color: #ffffff;
+        /* Blanco */
 }
 
 /* Estilo de los enlaces/bloques de texto */
 .schedule-table td a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrado vertical del contenido */
-    align-items: center;     /* Centrado horizontal del contenido */
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Centrado vertical del contenido */
+        align-items: center;
+        /* Centrado horizontal del contenido */
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        box-sizing: border-box;
 }
 
 /* Títulos de las sesiones */
 .schedule-table td a strong {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: #444;
-    margin-bottom: 6px;
-    display: block;
-    line-height: 1.2;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: #444;
+        margin-bottom: 6px;
+        display: block;
+        line-height: 1.2;
 }
 
 /* Color azul para los títulos en las columnas de fondo blanco (Imagen 2) */
@@ -588,8 +661,8 @@ footer .footer-logos {
         margin-top: 20px;
         text-align: center;
         padding: 10px 0;
-        display: flex;     
-        justify-content: center; 
+        display: flex;
+        justify-content: center;
         align-items: center;
         gap: 10px;
 }
@@ -617,104 +690,116 @@ footer .footer-logos {
 }
 
 .blue-button:hover {
-    background-color: #004d7a;
-    border-color: #003a5c;
-    color: #ffffff;
+        background-color: #004d7a;
+        border-color: #003a5c;
+        color: #ffffff;
 }
 
 /* --- FILA DE MÉTODOS DE PAGO --- */
 .payment-methods-row {
-    display: flex;            /* Activa Flexbox */
-    justify-content: center;  /* Centra las imágenes horizontalmente */
-    align-items: center;      /* Alinea las imágenes verticalmente */
-    gap: 20px;                /* Espacio de 2rem (20px) entre cada imagen */
-    margin: 20px 0;           /* Margen superior e inferior */
-    padding: 10px;
+        display: flex;
+        /* Activa Flexbox */
+        justify-content: center;
+        /* Centra las imágenes horizontalmente */
+        align-items: center;
+        /* Alinea las imágenes verticalmente */
+        gap: 20px;
+        /* Espacio de 2rem (20px) entre cada imagen */
+        margin: 20px 0;
+        /* Margen superior e inferior */
+        padding: 10px;
 }
 
 .payment-methods-row img {
-    height: auto;             /* Mantiene la proporción */
-    max-width: 100px;         /* Controla el ancho máximo de cada logo */
-    object-fit: contain;      /* Asegura que no se deformen */
-    display: block;
+        height: auto;
+        /* Mantiene la proporción */
+        max-width: 100px;
+        /* Controla el ancho máximo de cada logo */
+        object-fit: contain;
+        /* Asegura que no se deformen */
+        display: block;
 }
 
 /* Ajuste específico por si algún logo es más grande que otro */
 .payment-methods-row img[alt="Visa"] {
-    max-width: 80px;
+        max-width: 80px;
 }
 
 .payment-methods-row img[alt="Mastercard"] {
-    max-width: 60px;
+        max-width: 60px;
 }
 
 .payment-methods-row img[alt="American Express"] {
-    max-width: 50px;
+        max-width: 50px;
 }
 
 /* --- CONTENEDOR PRINCIPAL (TARJETA BLANCA) --- */
 .events-block {
-    background-color: #ffffff;
-    border-radius: 15px; /* Bordes redondeados de la imagen 2 */
-    padding: 25px 35px;
-    margin: 20px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
-    border: 1px solid #e0e0e0;
-    font-family: 'Poppins', sans-serif;
+        background-color: #ffffff;
+        border-radius: 15px;
+        /* Bordes redondeados de la imagen 2 */
+        padding: 25px 35px;
+        margin: 20px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        /* Sombra suave */
+        border: 1px solid #e0e0e0;
+        font-family: 'Poppins', sans-serif;
 }
 
 /* --- TÍTULO PRINCIPAL DEL EVENTO --- */
 .event-title {
-    color: #2f4fa0;
+        color: #2f4fa0;
 }
+
 /* Encabezado que junta título y elementos */
 .event-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px solid #e0e0e0; /* Línea divisoria fina */
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    color: #2f4fa0;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid #e0e0e0;
+        /* Línea divisoria fina */
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        color: #2f4fa0;
 }
 
 /* --- LISTADO DE SESIONES --- */
 .session-row {
-    margin-bottom: 15px;
-    line-height: 1.4;
+        margin-bottom: 15px;
+        line-height: 1.4;
 }
 
 /* Hora y Título de la sesión */
 .session-info {
-    font-size: 1.4rem;
-    color: #2f4fa0;
+        font-size: 1.4rem;
+        color: #2f4fa0;
 }
 
 .session-time {
-    font-weight: bold;
-    color: #2f4fa0;
-    margin-right: 5px;
+        font-weight: bold;
+        color: #2f4fa0;
+        margin-right: 5px;
 }
 
 .session-name {
-    font-weight: 700;
+        font-weight: 700;
 }
 
 /* Autores en cursiva debajo */
 .session-authors {
-    display: block;
-    font-style: italic;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 2px;
+        display: block;
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 2px;
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 992px) {
-    .event-header {
-        flex-direction: column;
-        gap: 10px;
-    }
+        .event-header {
+                flex-direction: column;
+                gap: 10px;
+        }
 }
 
 @keyframes fade {
@@ -726,4 +811,3 @@ footer .footer-logos {
                 opacity: 1
         }
 }
-
