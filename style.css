@@ -412,9 +412,9 @@ footer .footer-logos {
 .timeline-container {
     border: 2px solid #1a3a82;
     border-radius: 12px;
-    overflow: hidden; /* Corta el contenido para respetar las esquinas redondeadas */
+    overflow: hidden; 
     margin: 20px 0;
-    font-family: 'Poppins', sans-serif; /* Fuente Poppins para todo el contenedor */
+    font-family: 'Poppins', sans-serif;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 }
@@ -422,7 +422,7 @@ footer .footer-logos {
 /* --- TABLA DE AGENDA --- */
 .schedule-table {
     width: 100%;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0;
     table-layout: fixed;
 }
@@ -432,33 +432,49 @@ footer .footer-logos {
     background-color: #1a3a82;
     color: white;
     padding: 15px 10px;
-    font-weight: 700; /* Bold */
-    font-size: 1.4rem;
-    border: none;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    font-size: 1.2rem;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Líneas finas entre columnas */
 }
 
 .schedule-table thead th:last-child {
     border-right: none;
 }
 
-/* --- COLUMNA DE TIEMPO (Izquierda) --- */
+.schedule-table thead th:first-child,
+.schedule-table tbody td:first-child {
+    width: 60px; /* Aquí ajustas el ancho (antes estaba en 80px o 100px) */
+    min-width: 60px;
+    max-width: 70px;
+    white-space: nowrap; /* Evita que la hora se ponga una encima de otra */
+}
+
 .schedule-table tbody td:first-child {
     background-color: #1a3a82;
     color: white;
-    font-weight: 400;
-    font-size: 85%; /* Tamaño de fuente al 85% para las horas */
+    font-weight: 600;
+    font-size: 0.8rem; /* Un poco más pequeña para que quepa bien */
     text-align: center;
-    width: 80px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #ffffff;
+    vertical-align: middle;
+}
+/* --- COLUMNA DE TIEMPO (Izquierda - Estilo Imagen 2) --- */
+.schedule-table tbody td:first-child {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 90px;
+    border: 1px solid #ffffff; /* Bordes blancos definidos */
+    vertical-align: middle; /* Centrado vertical */
 }
 
 /* --- CELDAS Y SESIONES --- */
 .schedule-table td {
     border: 1px solid #e0e0e0;
-    height: 35px;
-    vertical-align: top;
+    height: 45px; /* Altura ajustada para mayor claridad */
+    vertical-align: middle; /* Centra el contenido verticalmente en celdas con rowspan */
     padding: 0;
 }
 
@@ -467,36 +483,45 @@ footer .footer-logos {
     background-color: #f2f2f2;
 }
 
-/* Sesiones en blanco para Monday y Wednesday */
+/* Fondo blanco para Monday y Wednesday */
+/* Nota: Se aplica a las columnas específicas según el diseño */
+.schedule-table tr td:nth-child(2),
+.schedule-table tr td:nth-child(4) {
+    background-color: #f2f2f2; /* Gris */
+}
+
 .schedule-table tr td:nth-child(3), 
 .schedule-table tr td:nth-child(5),
 .schedule-table tr td:nth-child(6) {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Blanco */
 }
 
-/* Estilo de los enlaces dentro de las celdas */
+/* Estilo de los enlaces/bloques de texto */
 .schedule-table td a {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centrado vertical del contenido */
+    align-items: center;     /* Centrado horizontal del contenido */
     text-decoration: none;
     height: 100%;
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
     text-align: center;
+    box-sizing: border-box;
 }
 
-/* Títulos de las sesiones (Bold) */
+/* Títulos de las sesiones */
 .schedule-table td a strong {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700; /* Poppins Bold */
+    font-weight: 700;
     font-size: 0.85rem;
     color: #444;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     display: block;
+    line-height: 1.2;
 }
 
-/* Color azul para los títulos en las columnas de fondo blanco */
+/* Color azul para los títulos en las columnas de fondo blanco (Imagen 2) */
 .schedule-table td:nth-child(3) a strong,
 .schedule-table td:nth-child(5) a strong,
 .schedule-table td:nth-child(6) a strong {
@@ -507,7 +532,7 @@ footer .footer-logos {
 .schedule-table td a small {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 85%; /* Poppins 85% */
+    font-size: 0.85rem;
     color: #777;
     display: block;
 }
@@ -517,49 +542,18 @@ footer .footer-logos {
     background-color: rgba(0, 113, 188, 0.05);
 }
 
-/* --- BANNER AZUL DE EVENTO --- */
+/* --- ESTILOS ADICIONALES DEL BANNER --- */
 .event-banner-blue {
-    background-color: #3f60c1; /* Azul vibrante de la imagen */
+    background-color: #3f60c1;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
 }
 
 .event-banner-blue h1 {
-    font-family: "Oswald", Arial, sans-serif;
-    font-weight: 500;
-    line-height: 1.1;
-    font-size: 2.2rem;
-    margin-bottom: 15px;
+    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
-}
-
-.event-banner-blue p {
-    /* Especificaciones del usuario */
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-    font-size: 2rem;
-    line-height: 1.42857143;
-    margin-bottom: 5px;
-}
-
-.event-info-line {
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.event-timezone {
-    font-size: 1.2rem;
-    font-weight: 400;
-    opacity: 0.9;
-}
-
-/* --- CONTENEDOR DE ACCIONES (CENTRAR BOTÓN) --- */
-.program-actions {
-    text-align: center;
-    padding: 25px 0;
-    background-color: #e9e9e9; /* Fondo gris de la página */
+    font-size: 2.2rem;
 }
 
 /* --- CLASE REUTILIZABLE: BLUE BUTTON --- */
@@ -625,6 +619,71 @@ footer .footer-logos {
 
 .payment-methods-row img[alt="American Express"] {
     max-width: 50px;
+}
+
+/* --- CONTENEDOR PRINCIPAL (TARJETA BLANCA) --- */
+.events-block {
+    background-color: #ffffff;
+    border-radius: 15px; /* Bordes redondeados de la imagen 2 */
+    padding: 25px 35px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    border: 1px solid #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- TÍTULO PRINCIPAL DEL EVENTO --- */
+.event-title {
+    color: #2f4fa0;
+}
+/* Encabezado que junta título y elementos */
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #e0e0e0; /* Línea divisoria fina */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #2f4fa0;
+}
+
+/* --- LISTADO DE SESIONES --- */
+.session-row {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Hora y Título de la sesión */
+.session-info {
+    font-size: 1.4rem;
+    color: #2f4fa0;
+}
+
+.session-time {
+    font-weight: bold;
+    color: #2f4fa0;
+    margin-right: 5px;
+}
+
+.session-name {
+    font-weight: 700;
+}
+
+/* Autores en cursiva debajo */
+.session-authors {
+    display: block;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .event-header {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 @keyframes fade {
