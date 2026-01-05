@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComManTel 2025 | Madrid, Spain</title>
+    <title>Committees | ComManTel 2025</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -16,20 +16,24 @@
     <div class="container">
         <header>
             <div class="header-info">
-                <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications
-                    (ComManTel)</p>
+                <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications (ComManTel)</p>
                 <p class="event-date-location">14-17 December 2025 // Madrid, Spain</p>
                 <p class="event-status">Hybrid Event</p>
             </div>
             <div class="logo-wrapper">
-                <img src="images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
-                <img src="images/ieee@2x.png" alt="IEEE Logo">
+                <img src="/images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
+                <img src="/images/ieee@2x.png" alt="IEEE Logo">
             </div>
         </header>
 
         <nav class="main-nav">
+            <div class="menu-sandwich" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li>
                     <a href="orgCommittee.html">Committees</a>
@@ -64,34 +68,49 @@
                 <li><a href="venue.html">Venue</a></li>
             </ul>
         </nav>
-        <br>
 
         <div class="main-layout">
             <div class="content-left">
-                <h1 class="section-title">Workshops</h1>
+                <h1 class="section-title">Venue</h1>
                 <div class="welcome-text">
-                    <ul>
+                    <p>
+                        The conference will be hosted in the beautiful city of Madrid, Spain. We are pleased to announce that the official venue is:
+                    </p>
+
+                    <h3 class="hotel-title">
+                        HOLIDAY INN MADRID - LAS TABLAS
+                    </h3>
+
+                    <p>
+                        Located in the heart of Madrid's business district, this modern hotel offers elegant accommodations, premium amenities, and excellent connectivity to the city's attractions. It's a perfect venue for both professional gatherings and leisure exploration.
+                    </p>
+
+                    <div class="venue-image-wrapper" style="margin-top: 25px;">
+                        <img src="/images/venuehotel.webp" alt="Holiday Inn Madrid - Las Tablas" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    </div>
+
+                    <h3>Madrid Trivia & Curiosities</h3>
+                    <div class="welcome-text">
+                        <p>
+                            While attending <strong>ComManTel 2025</strong>, you might want to know these interesting facts about our host city:
+                        </p>
                         <ul>
-                            <ul>
-                                <li>
-                                    <a href="HEIMS2025.html">Human-centric Emotionally Intelligent Management Systems (HEIMS2025)</a>
-                                </li>
-                            </ul>    
+                            <li><strong>Highest Capital:</strong> Madrid is the highest capital city in the European Union, located about 667 meters above sea level.</li>
+                            <li><strong>The Oldest Restaurant:</strong> According to the Guinness World Records, Sobrino de Botín (founded in 1725) is the oldest continuously operating restaurant in the world.</li>
+                            <li><strong>Sun Symbolism:</strong> The "Puerta del Sol" is the exact center (Km 0) of the Spanish radial road network.</li>
+                            <li><strong>Art Triangle:</strong> Madrid is home to the "Golden Triangle of Art," comprising the Prado, Reina Sofía, and Thyssen-Bornemisza museums, all within walking distance.</li>
                         </ul>
-                    </ul>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
+                    </div>
                 </div>
 
                 <h1 class="section-title">Patrons</h1>
                 <div class="patrons">
-                    <img src="images/Patron_1.png" alt="Patron 1">
-                    <img src="images/Patron_2.png" alt="Patron 2">
+                    <img src="/images/Patron_1.png" alt="IEEE Sección España">
+                    <img src="/images/Patron_2.png" alt="Universidad Politécnica de Valencia">
                 </div>
             </div>
+
+            <aside class="sidebar-right"></aside>
         </div>
 
         <footer>
@@ -103,11 +122,11 @@
                     <p>&copy; COMMANTEL 2025. All rights reserved.</p>
                 </div>
                 <div class="footer-logo">
-                    <img src="images/ieee@2x.png" alt="IEEE" height="40">
+                    <img src="/images/ieee@2x.png" alt="IEEE" height="40">
                 </div>
             </div>
         </footer>
     </div>
+    <script src="/js/responsiveMenu.js"></script>
 </body>
-
 </html>

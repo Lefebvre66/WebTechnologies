@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -16,19 +16,25 @@
     <div class="container">
         <header>
             <div class="header-info">
-                <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications (ComManTel)</p>
+                <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications
+                    (ComManTel)</p>
                 <p class="event-date-location">14-17 December 2025 // Madrid, Spain</p>
                 <p class="event-status">Hybrid Event</p>
             </div>
             <div class="logo-wrapper">
-                <img src="images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
-                <img src="images/ieee@2x.png" alt="IEEE Logo">
+                <img src="/images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
+                <img src="/images/ieee@2x.png" alt="IEEE Logo">
             </div>
         </header>
 
         <nav class="main-nav">
+            <div class="menu-sandwich" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li>
                     <a href="orgCommittee.html">Committees</a>
@@ -59,7 +65,7 @@
                         <li><a href="eventConduct.html">Event Conduct</a></li>
                     </ul>
                 </li>
-                
+
                 <li><a href="venue.html">Venue</a></li>
             </ul>
         </nav>
@@ -67,20 +73,29 @@
         <div class="main-layout">
             <div class="content-left">
                 <h1 class="section-title">Call for Papers</h1>
-                
+
                 <div class="welcome-text">
                     <p>
-                        The <strong>Computing, Management, and Telecommunications Conference (ComManTel 2025)</strong> invites researchers, practitioners, and academicians to submit original technical papers for presentation. ComManTel 2025 provides an international forum to explore the latest advancements, challenges, and applications at the nexus of digital technology, organizational strategy, and modern communication systems.
+                        The <strong>Computing, Management, and Telecommunications Conference (ComManTel 2025)</strong>
+                        invites researchers, practitioners, and academicians to submit original technical papers for
+                        presentation. ComManTel 2025 provides an international forum to explore the latest advancements,
+                        challenges, and applications at the nexus of digital technology, organizational strategy, and
+                        modern communication systems.
                     </p>
 
                     <h3>Submission Guidelines</h3>
                     <p>
-                        Prospective authors are invited to submit original technical papers of up to <strong>6 pages</strong> in length. Papers can be extended to a maximum of <strong>8 pages</strong>, with an additional charge of $100 per extra page beyond 6 pages. All submissions must adhere to the conference formatting guidelines and be submitted through the EDAS platform. <strong>High-quality papers will be invited for consideration in associated Journal Special Issues.</strong>
+                        Prospective authors are invited to submit original technical papers of up to <strong>6
+                            pages</strong> in length. Papers can be extended to a maximum of <strong>8 pages</strong>,
+                        with an additional charge of $100 per extra page beyond 6 pages. All submissions must adhere to
+                        the conference formatting guidelines and be submitted through the EDAS platform.
+                        <strong>High-quality papers will be invited for consideration in associated Journal Special
+                            Issues.</strong>
                     </p>
 
                     <h3>Topics of Interest</h3>
                     <p>Topics include, but are not limited to:</p>
-                    
+
                     <div class="topics-grid">
                         <h4>Computing Technologies:</h4>
                         <ul>
@@ -122,15 +137,15 @@
 
                 <h1 class="section-title">Patrons</h1>
                 <div class="patrons">
-                    <img src="images/Patron_1.png" alt="IEEE Sección España">
-                    <img src="images/Patron_2.png" alt="Universidad Politécnica de Valencia">
+                    <img src="/images/Patron_1.png" alt="IEEE Sección España">
+                    <img src="/images/Patron_2.png" alt="Universidad Politécnica de Valencia">
                 </div>
             </div>
 
             <aside class="sidebar-right">
                 <ul class="internal-links">
-                        <li><a href="authorPapers.html">Call for Papers</a></li>
-                        <li><a href="authorCamera.html">Camera ready</a></li>
+                    <li><a href="authorPapers.html">Call for Papers</a></li>
+                    <li><a href="authorCamera.html">Camera ready</a></li>
                 </ul>
             </aside>
         </div>
@@ -144,11 +159,12 @@
                     <p>&copy; COMMANTEL 2025. All rights reserved.</p>
                 </div>
                 <div class="footer-logo">
-                    <img src="images/ieee@2x.png" alt="IEEE" height="40">
+                    <img src="/images/ieee@2x.png" alt="IEEE" height="40">
                 </div>
             </div>
         </footer>
     </div>
-
+<script src="/js/responsiveMenu.js"></script>
 </body>
+
 </html>

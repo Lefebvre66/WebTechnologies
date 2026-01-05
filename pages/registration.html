@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -21,14 +21,19 @@
                 <p class="event-status">Hybrid Event</p>
             </div>
             <div class="logo-wrapper">
-                <img src="images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
-                <img src="images/ieee@2x.png" alt="IEEE Logo">
+                <img src="/images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
+                <img src="/images/ieee@2x.png" alt="IEEE Logo">
             </div>
         </header>
 
         <nav class="main-nav">
+            <div class="menu-sandwich" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li>
                     <a href="orgCommittee.html">Committees</a>
@@ -71,9 +76,9 @@
                 <div class="welcome-text" style="text-align: center;">
                     <a href="register.html" class="blue-button">Register Now</a>
                     <div class="payment-methods-row">
-                        <img src="images/visa.png" alt="Visa">
-                        <img src="images/mastercard.png" alt="Mastercard">
-                        <img src="images/americanexpress.png" alt="American Express">
+                        <img src="/images/visa.png" alt="Visa">
+                        <img src="/images/mastercard.png" alt="Mastercard">
+                        <img src="/images/americanexpress.png" alt="American Express">
                     </div>
                 </div>
 
@@ -153,8 +158,8 @@
                 </div>
                 <h1 class="section-title">Patrons</h1>
                 <div class="patrons">
-                    <img src="images/Patron_1.png" alt="IEEE Sección España">
-                    <img src="images/Patron_2.png" alt="Universidad Politécnica de Valencia">
+                    <img src="/images/Patron_1.png" alt="IEEE Sección España">
+                    <img src="/images/Patron_2.png" alt="Universidad Politécnica de Valencia">
                 </div>
             </div>
             <aside class="sidebar-right">
@@ -173,11 +178,12 @@
                     <p>&copy; COMMANTEL 2025. All rights reserved.</p>
                 </div>
                 <div class="footer-logo">
-                    <img src="images/ieee@2x.png" alt="IEEE" height="40">
+                    <img src="/images/ieee@2x.png" alt="IEEE" height="40">
                 </div>
             </div>
         </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="/js/registration.js"></script>
+    <script src="/js/responsiveMenu.js"></script>
 </body>
 </html>
