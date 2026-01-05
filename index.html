@@ -27,31 +27,84 @@
             </div>
         </header>
 
-        <nav>
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Committees</a></li>
-                <li><a href="#">Author</a></li>
-                <li><a href="#">Workshops</a></li>
-                <li><a href="#">Keynote Speakers</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Registration</a></li>
-                <li><a href="#">Hotel / Travel</a></li>
+                <li>
+                    <a href="orgCommittee.html">Committees</a>
+                    <ul>
+                        <li><a href="steCommittee.html">Steering Committee</a></li>
+                        <li><a href="orgCommittee.html">Organizing Committee</a></li>
+                        <li><a href="techCommittee.html">Technical Program Committee</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="authorPapers.html">Author</a>
+                    <ul>
+                        <li><a href="authorPapers.html">Call for Papers</a></li>
+                        <li><a href="authorCamera.html">Camera ready</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="programDetails.html">Program</a>
+                    <ul>
+                        <li><a href="programOverview.html">Overview Program</a></li>
+                        <li><a href="programDetails.html">Program Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="registration.html">Registration</a>
+                    <ul>
+                        <li><a href="eventConduct.html">Event Conduct</a></li>
+                    </ul>
+                </li>
+                <li><a href="#membership">Membership</a></li>
                 <li><a href="#">Venue</a></li>
             </ul>
         </nav>
 
-        <div class="hero">
-            <img src="images/0.jpg" alt="Madrid View">
-            <div class="slider-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="images/0.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/5.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div class="slideshow-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
             </div>
         </div>
+        <br>
 
         <div class="main-layout">
             <div class="content-left">
@@ -230,7 +283,7 @@
             </div>
         </footer>
     </div>
-    <!--<script src="index.js"></script>-->
+    <script src="index.js"></script>
 </body>
 
 </html>

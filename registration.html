@@ -1,28 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComManTel 2025 | Madrid, Spain</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Registration | ComManTel 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la tabla de registro que puedes añadir a tu style.css */
+        .reg-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        .reg-table th, .reg-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .reg-table th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .btn-register {
+            display: inline-block;
+            background-color: #0071bc;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .btn-register:hover {
+            background-color: #005a96;
+        }
+    </style>
 </head>
+
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="container">
+        <header>
+            <div class="header-info">
+                <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications (ComManTel)</p>
+                <p class="event-date-location">14-17 December 2025 // Madrid, Spain</p>
+                <p class="event-status">Hybrid Event</p>
+            </div>
+            <div class="logo-wrapper">
+                <img src="images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
+                <img src="images/ieee@2x.png" alt="IEEE Logo">
+            </div>
+        </header>
 
-    <header>
-        <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications (ComManTel)</p>
-        <p class="event-date-location">14-17 December 2025 // Madrid, Spain</p>
-        <p class="event-status" style="color: red; font-weight: bold;">Hybrid Event</p>
-
-        <div class="logo-wrapper">
-            <img src="images/ieee-comsoc-new-x2.png" alt="IEEE Communications Society Logo">
-            <img src="images/ieee@2x.png" alt="IEEE Logo">
-        </div>
-
-        <button type="button" id="toggle-nav">Toggle navigation</button>
-
-        <nav id="main-nav">
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -57,109 +92,93 @@
                 <li><a href="#">Venue</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <section id="registration">
-        <h1 style="text-align: center;">Registration</h1>
-        <div style="text-align: center;">
-            <p><a href="#">Register Now</a></p>
-            <p><strong>VISA | Mastercard | American Express</strong></p>
-        </div>
 
-        <h2>Registration Fees and Policies</h2>
-        <ol>
-            <li>Per IEEE policy, for each accepted paper to be published in the IEEE COMCOMAP 2025 Proceedings and IEEE Xplore®, at least one author (including students) is required to register at the FULL AUTHOR REGISTRATION RATE. Moreover, the paper must be presented by an author named on the paper.</li>
-            <li>Conference registration covers: proceedings, coffee breaks, lunches, reception, gala dinner, all co-located workshops, and attendance at all keynotes.</li>
-            <li>Main conference papers require a full registration. Otherwise, the paper will be excluded from the proceedings.</li>
-            <li>Non-refundable registration fees must be paid prior to uploading the final camera-ready version of the paper.</li>
-            <li>The final version of accepted papers must follow the standard 2-column IEEE format.</li>
-            <li>Authors must follow the allowed paper length. Extra pages can be purchased with an additional fee.</li>
-        </ol>
+        <div class="main-layout">
+            <div class="content-left">
+                <h1 class="section-title">Registration</h1>
+                
+                <div class="welcome-text" style="text-align: center;">
+                    <a href="#" class="btn-register">REGISTER NOW</a>
+                    <p><strong>Accepted: VISA | Mastercard | American Express</strong></p>
+                </div>
 
-        <h2>Registration Fees (in U.S dollars, excluding 3% tax)</h2>
-        <table border="1" style="width: 100%; border-collapse: collapse;">
-            <thead>
-                <tr>
-                    <th align="left">Registration Category</th>
-                    <th align="center">Early Registration<br><span style="color: red;">(until Nov. 25th, 2025 (firm))</span></th>
-                    <th align="center">Late Registration</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>IEEE Member</td>
-                    <td align="center">$550</td>
-                    <td align="center">$650</td>
-                </tr>
-                <tr>
-                    <td>Non IEEE Member</td>
-                    <td align="center">$650</td>
-                    <td align="center">$750</td>
-                </tr>
-                <tr>
-                    <td>IEEE Student Member (1st Author)</td>
-                    <td align="center">$650</td>
-                    <td align="center">$750</td>
-                </tr>
-                <tr>
-                    <td>Attendee</td>
-                    <td align="center">$650</td>
-                    <td align="center">$750</td>
-                </tr>
-                <tr>
-                    <td>Extra Page</td>
-                    <td align="center">$75</td>
-                    <td align="center">-</td>
-                </tr>
-                <tr>
-                    <td>Extra Banquet Ticket</td>
-                    <td align="center">$75</td>
-                    <td align="center">$100</td>
-                </tr>
-                <tr>
-                    <td>Extra Reception Ticket</td>
-                    <td align="center">$75</td>
-                    <td align="center">$100</td>
-                </tr>
-            </tbody>
-        </table>
+                <div class="welcome-text">
+                    <h3>Registration Fees and Policies</h3>
+                    <ol>
+                        <li>Per IEEE policy, for each accepted paper to be published in the proceedings, at least one author is required to register at the <strong>FULL AUTHOR REGISTRATION RATE</strong>.</li>
+                        <li>Registration covers: proceedings, coffee breaks, lunches, reception, gala dinner, and all sessions.</li>
+                        <li>Main conference papers require a full registration to be included in the proceedings.</li>
+                        <li>Fees must be paid prior to uploading the final camera-ready version.</li>
+                    </ol>
 
-        <p><strong>Second Paper Registration:</strong> 50% discounted<br>
-        <strong>Third Paper Registration:</strong> Full paper rate</p>
+                    <h3>Registration Fees (USD, excluding 3% tax)</h3>
+                    <table class="reg-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Early Bird <br><small class="date-blue">(Until Nov 25)</small></th>
+                                <th>Late Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IEEE Member</td>
+                                <td>$550</td>
+                                <td>$650</td>
+                            </tr>
+                            <tr>
+                                <td>Non IEEE Member</td>
+                                <td>$650</td>
+                                <td>$750</td>
+                            </tr>
+                            <tr>
+                                <td>IEEE Student Member</td>
+                                <td>$650</td>
+                                <td>$750</td>
+                            </tr>
+                            <tr>
+                                <td>Extra Page</td>
+                                <td>$75</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-        <h3>IEEE Student Registration</h3>
-        <p>To qualify for the IEEE student reduced registration fee, you must hold an active IEEE student membership.</p>
+                    <p><strong>Second Paper:</strong> 50% discount | <strong>Third Paper:</strong> Full rate</p>
 
-        <h3>Invitation Letter</h3>
-        <p>Letters of invitation will be provided only to authors with an accepted paper and/or those who have paid the full registration fee.<br>
-        To request a letter of invitation for visa purposes, please contact: <a href="mailto:info@comcomap.net">info@comcomap.net</a>.</p>
+                    <h3>Visa & Invitation Letter</h3>
+                    <p>Invitation letters are provided only to registered authors. Contact <a href="mailto:info@comcomap.net">info@comcomap.net</a> to request one.</p>
 
-        <h3>Wire Transfer Registration</h3>
-        <p>If you would like to pay your registration fees through wire transfer, please contact the conference organizers at: <a href="mailto:info@comcomap.net">info@comcomap.net</a>. In your email, please indicate the EDAS paper number(s) (10 digits) and title(s).</p>
+                    <h3>Cancellation Policy</h3>
+                    <p>Refund requests must be received by <strong>October 30th, 2025</strong>. A 10% administrative fee applies.</p>
+                </div>
 
-        <h3>Cancellation Policy</h3>
-        <p>All refund/cancellation requests must be received by <strong>October 30th, 2025</strong>. An administrative fee of 10% of the registration fee will be deducted from each refund.</p>
-        <ul>
-            <li><a href="registration.html">Registration</a></li>
-            <li><a href="#">Event Conduct</a></li>
-        </ul>
-        </section>
-        <div id="patrons">
-            <div class="patrons-container">
-                <h2>Patrons</h2>
-                <img src="images/Patron_1.png" alt="IEEE Sección España">
-                <img src="images/Patron_2.png" alt="Universidad Politécnica de Valencia">
+                <h1 class="section-title">Patrons</h1>
+                <div class="patrons">
+                    <img src="images/Patron_1.png" alt="IEEE Sección España">
+                    <img src="images/Patron_2.png" alt="Universidad Politécnica de Valencia">
+                </div>
             </div>
+
+            <aside class="sidebar-right">
+                <ul>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="eventConduct.html">Event Conduct</a></li>
+                </ul>
+            </aside>
         </div>
-    </main>
-    <footer>
-        <p>For more information, contact <a style="color:grey" href="mailto:info@commantel.net"><b>info@commantel.net</b></a> or visit <a style="color:grey" href="https://commantel.net"><b>https://commantel.net</b></a></p>
-        <p>&copy; COMMANTEL 2025. All rights reserved.</p>
-        <div class="logo-wrapper">
-            <img src="images/ieee-comsoc-new-x2.png" alt="IEEE Communications Society Logo">
-            <img src="images/ieee@2x.png" alt="IEEE Logo">
-        </div>
-    </footer>
+
+        <footer>
+            <p>For more information, contact <strong>info@commantel.net</strong> or visit
+                <strong>https://commantel.net</strong>
+            </p>
+            <p>&copy; COMMANTEL 2025. All rights reserved.</p>
+            <div class="footer-logos">
+                <img src="images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc" height="30">
+                <img src="images/ieee@2x.png" alt="IEEE" height="30">
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>

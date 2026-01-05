@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComManTel 2025 | Madrid, Spain</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Overview Program | ComManTel 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="container">
+        <header>
+            <div class="header-info">
+                <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications
+                    (ComManTel)</p>
+                <p class="event-date-location">14-17 December 2025 // Madrid, Spain</p>
+                <p class="event-status">Hybrid Event</p>
+            </div>
+            <div class="logo-wrapper">
+                <img src="images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc">
+                <img src="images/ieee@2x.png" alt="IEEE Logo">
+            </div>
+        </header>
 
-    <header>
-        <p class="event-name">2025 4th International Conference on Computing, Management and Telecommunications (ComManTel)</p>
-        <p class="event-date-location">14-17 December 2025 // Madrid, Spain</p>
-        <p class="event-status" style="color: red; font-weight: bold;">Hybrid Event</p>
-
-        <div class="logo-wrapper">
-            <img src="images/ieee-comsoc-new-x2.png" alt="IEEE Communications Society Logo">
-            <img src="images/ieee@2x.png" alt="IEEE Logo">
-        </div>
-
-        <button type="button" id="toggle-nav">Toggle navigation</button>
-
-        <nav id="main-nav">
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li>
-                    <a href="#">Committees</a>
-                    <ul> 
+                    <a href="orgCommittee.html">Committees</a>
+                    <ul>
                         <li><a href="steCommittee.html">Steering Committee</a></li>
                         <li><a href="orgCommittee.html">Organizing Committee</a></li>
                         <li><a href="techCommittee.html">Technical Program Committee</a></li>
@@ -57,34 +62,47 @@
                 <li><a href="#">Venue</a></li>
             </ul>
         </nav>
-    </header>
-    <main id="main-content">
-        <section class="overview-schedule">
-            <h2 class="section-title">Overview Program</h2>
-            <div class="schedule-image-wrapper">
-                <img src="images/Overview_Program.png" alt="Overview Program IEEE COMCOMAP/COMMANTEL 2025" height="auto" width="100%" class="full-schedule-img">
-            </div>
-            <div class="schedule-actions">
-                <a href="#" class="btn-download">Download Overview Program</a>
-                <a href="#" class="btn-details">Program Details</a>
-            </div>
-        </section>
-        <div id="patrons">
-            <div class="patrons-container">
-                <h2>Patrons</h2>
-                <img src="images/Patron_1.png" alt="IEEE Sección España">
-                <img src="images/Patron_2.png" alt="Universidad Politécnica de Valencia">
+
+        <div class="main-layout">
+            <div class="content-left">
+                <h1 class="section-title">Overview Program</h1>
+
+                <div class="welcome-text">
+                    <div class="schedule-image-wrapper" style="margin-bottom: 20px;">
+                        <img src="images/Overview_Program.png" alt="Overview Program ComManTel 2025"
+                            style="width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+
+                    <div class="schedule-actions" style="display: flex; gap: 10px; margin-bottom: 30px;">
+                        <a href="images/Overview_Program.png" download class="date-blue"
+                            style="text-decoration: none; padding: 10px 15px; border: 1px solid #0071bc; font-weight: bold;">Download
+                            Overview Program</a>
+                        <a href="programDetails.html"
+                            style="text-decoration: none; padding: 10px 15px; background: #eee; color: #333; font-weight: bold;">Program
+                            Details</a>
+                    </div>
+                </div>
+
+                <h1 class="section-title">Patrons</h1>
+                <div class="patrons">
+                    <img src="images/Patron_1.png" alt="IEEE Sección España">
+                    <img src="images/Patron_2.png" alt="Universidad Politécnica de Valencia">
+                </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <p>For more information, contact <a style="color:grey" href="mailto:info@commantel.net"><b>info@commantel.net</b></a> or visit <a style="color:grey" href="https://commantel.net"><b>https://commantel.net</b></a></p>
-        <p>&copy; COMMANTEL 2025. All rights reserved.</p>
-        <div class="logo-wrapper">
-            <img src="images/ieee-comsoc-new-x2.png" alt="IEEE Communications Society Logo">
-            <img src="images/ieee@2x.png" alt="IEEE Logo">
-        </div>
-    </footer>
+
+        <footer>
+            <p>For more information, contact <strong>info@commantel.net</strong> or visit
+                <strong>https://commantel.net</strong>
+            </p>
+            <p>&copy; COMMANTEL 2025. All rights reserved.</p>
+            <div class="footer-logos">
+                <img src="images/ieee-comsoc-new-x2.png" alt="IEEE ComSoc" height="30">
+                <img src="images/ieee@2x.png" alt="IEEE" height="30">
+            </div>
+        </footer>
+    </div>
 
 </body>
+
 </html>

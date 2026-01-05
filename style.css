@@ -70,12 +70,15 @@ header {
         vertical-align: middle;
 }
 
-/* --- NAVEGACIÓN AZUL --- */
-nav {
+/* --- NAVEGACIÓN PRINCIPAL (BASE) --- */
+.main-nav {
         background-color: #0071bc;
+        position: relative;
+        z-index: 1000;
+        /* Asegura que el menú esté por encima de todo */
 }
 
-nav ul {
+.main-nav ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
@@ -83,13 +86,16 @@ nav ul {
         margin: 0;
 }
 
-nav ul li {
+/* Estilo para los ítems de primer nivel */
+.main-nav>ul>li {
+        position: relative;
+        /* Necesario para posicionar el submenú */
         border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-nav ul li a {
+.main-nav ul li a {
         display: block;
-        padding: 12px 15px;
+        padding: 12px 20px;
         color: #fff;
         text-decoration: none;
         font-family: 'Oswald', sans-serif;
@@ -98,8 +104,49 @@ nav ul li a {
         text-transform: uppercase;
 }
 
-nav ul li a:hover {
+.main-nav ul li a:hover {
         background-color: #005a96;
+}
+
+/* --- SUBMENÚS (LO NUEVO) --- */
+
+/* Ocultar el submenú por defecto */
+.main-nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        /* Aparece justo debajo */
+        left: 0;
+        background-color: #005a96;
+        /* Un tono más oscuro */
+        min-width: 220px;
+        flex-direction: column;
+        /* Alineación vertical */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mostrar al pasar el ratón */
+.main-nav ul li:hover>ul {
+        display: flex;
+}
+
+/* Estilos para los enlaces dentro del submenú */
+.main-nav ul li ul li {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+}
+
+.main-nav ul li ul li a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        text-transform: none;
+        /* Submenús en minúsculas se leen mejor */
+}
+
+.main-nav ul li ul li a:hover {
+        background-color: #004574;
+        /* Efecto hover más profundo en submenús */
 }
 
 /* --- BANNER PRINCIPAL (MADRID) --- */
@@ -125,15 +172,15 @@ nav ul li a:hover {
 }
 
 .dot {
-        width: 12px;
-        height: 12px;
-        background: rgba(255, 255, 255, 0.5);
+        width: 18px;
+        height: 18px;
+        background: #bbb;
         border-radius: 50%;
 }
 
 .dot.active {
-        background: #fff;
-        border: 2px solid #0071bc;
+        background: #0071bc;
+        border: none;
 }
 
 /* --- CONTENIDO DE DOS COLUMNAS --- */
@@ -266,4 +313,89 @@ footer {
 footer .footer-logos {
         margin-top: 10px;
         opacity: 0.7;
+}
+
+
+
+* {
+        box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+        max-width: 2000px;
+        position: relative;
+        margin: auto;
+}
+
+.slideshow-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 12px;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        padding: 6px 10px;
+        border-radius: 999px;
+}
+
+/* Hide the images by default */
+.mySlides {
+        display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -50px;
+        padding: 16px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 50px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+        background-color: #0071bc;
+}
+
+/* Fading animation */
+.fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+}
+
+@keyframes fade {
+        from {
+                opacity: .4
+        }
+
+        to {
+                opacity: 1
+        }
 }
