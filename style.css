@@ -205,19 +205,46 @@ header {
 
 /* --- CONTENIDO DE DOS COLUMNAS --- */
 .main-layout {
-        display: flex;
-        padding: 20px;
-        gap: 30px;
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    align-items: flex-start;
 }
 
 .content-left {
-        flex: 2;
+    flex: 3; /* Le damos más espacio al contenido principal */
 }
 
+/* --- COLUMNA LATERAL (Estilo Navegación Superior Derecha) --- */
 .sidebar-right {
-        flex: 1;
-        border-left: 1px solid #ddd;
-        padding-left: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.sidebar-right ul {
+    list-style: none;    /* ELIMINA LOS PUNTOS (bullets) */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-right ul li {
+    margin-bottom: 15px; /* Espaciado vertical entre links */
+}
+
+.sidebar-right ul li a {
+    text-decoration: none;
+    color: #3a7ebf;      /* El azul cian/claro de las fotos de Registration */
+    font-family: 'Oswald', sans-serif; /* O una fuente condensada similar */
+    font-size: 1.9rem;   /* Tamaño grande como se ve en la imagen */
+    font-weight: 400;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    transition: color 0.2s ease;
+}
+
+.sidebar-right ul li a:hover {
+    color: #2f4fa0;      /* Color un poco más oscuro al pasar el mouse */
 }
 
 /* --- TÍTULOS ESTILO BARRA GRIS --- */
@@ -525,64 +552,68 @@ footer .footer-logos {
 .schedule-table td:nth-child(3) a strong,
 .schedule-table td:nth-child(5) a strong,
 .schedule-table td:nth-child(6) a strong {
-    color: #4a90e2;
+        color: #4a90e2;
 }
 
 /* Horas debajo de los títulos */
 .schedule-table td a small {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 0.85rem;
-    color: #777;
-    display: block;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 0.85rem;
+        color: #777;
+        display: block;
 }
 
 /* Hover effect suave */
 .schedule-table td a:hover {
-    background-color: rgba(0, 113, 188, 0.05);
+        background-color: rgba(0, 113, 188, 0.05);
 }
 
 /* --- ESTILOS ADICIONALES DEL BANNER --- */
 .event-banner-blue {
-    background-color: #3f60c1;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+        background-color: #3f60c1;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
 }
 
 .event-banner-blue h1 {
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    font-size: 2.2rem;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        font-size: 2.2rem;
 }
 
 /* --- CLASE REUTILIZABLE: BLUE BUTTON --- */
 .program-actions {
-    margin-top: 20px;
-    text-align: center;
-    padding: 10px 0;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px 0;
+        display: flex;     
+        justify-content: center; 
+        align-items: center;
+        gap: 10px;
 }
 
 .blue-button {
-    display: inline-block;
-    margin-bottom: 0;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    white-space: nowrap;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    border-radius: 4px;
-    text-decoration: none;
-    user-select: none;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-    color: #ffffff !important;
-    background-color: #005f98;
-    border: 1px solid #004f7f;
-    transition: background-color 0.2s ease-in-out;
+        display: inline-flex;
+        margin-bottom: 0;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        white-space: nowrap;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        border-radius: 4px;
+        text-decoration: none;
+        user-select: none;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+        color: #ffffff !important;
+        background-color: #005f98;
+        border: 1px solid #004f7f;
+        transition: background-color 0.2s ease-in-out;
 }
 
 .blue-button:hover {
